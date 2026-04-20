@@ -28,7 +28,8 @@ export default function ChatPage() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/chat`, {
+      // Changed from ${process.env.NEXT_PUBLIC_API_URL}/chat to /api/chat
+      const response = await fetch("/api/chat", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -42,7 +43,9 @@ export default function ChatPage() {
       const data = await response.json();
       setMessages(prev => [...prev, { role: 'assistant', content: data.answer }]);
     } catch (err) {
-      setMessages(prev => [...prev, { role: 'assistant', content: "⚠️ Error: Could not reach the Azure brain." }]);
+      // Added a more descriptive error for debugging
+      console.error(err);
+      setMessages(prev => [...prev, { role: 'assistant', content: "⚠️ Error: Connection through Netlify Proxy failed." }]);
     } finally {
       setIsLoading(false);
     }
