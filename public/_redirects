@@ -1,1 +1,1 @@
-/api/* http://4.152.103.217:8000/:splat  200!
+/api/*  https://dl-tutor-api.greentree-3344b43b.eastus.azurecontainerapps.io/:splat  200!
