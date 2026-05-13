@@ -48,7 +48,7 @@ export default function ChatPage() {
     <main className="flex flex-col h-screen bg-[#212121] text-[#ececec]">
       {/* Top Header */}
       <header className="p-4 flex justify-between items-center border-b border-white/10">
-        <div className="font-semibold text-lg">DL Tutor v2</div>
+        <div className="font-semibold text-lg">DL Tutor</div>
         <div className="text-xs text-green-400 font-mono bg-green-400/10 px-2 py-1 rounded">PROXIED_SECURE</div>
       </header>
 
@@ -114,7 +114,7 @@ export default function ChatPage() {
           </button>
         </form>
         <p className="text-[10px] text-center mt-3 text-gray-500">
-          DL Tutor can make mistakes. Verify important info with your Information Security professor.
+          DL Tutor can make mistakes. Verify important info.
         </p>
       </footer>
     </main>
